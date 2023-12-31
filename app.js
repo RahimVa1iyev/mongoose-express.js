@@ -11,10 +11,10 @@ app.use(express.json())
 
 app.use(express.static('./public'))
 
-app.use(errorHandlerMiddleware)
 
 app.use('/api/v1/tasks',tasks)
 
+app.use(errorHandlerMiddleware)
 
 const start = async ()=>{
     try {
