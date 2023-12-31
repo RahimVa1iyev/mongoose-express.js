@@ -8,9 +8,7 @@ const port = 3000
 // middleware
 app.use(express.json())
 
-app.get('/',(req,res) =>{
-    res.send('Hello')
-})
+app.use(express.static('./public'))
 
 app.use('/api/v1/tasks',tasks)
 
